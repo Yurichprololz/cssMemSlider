@@ -34,8 +34,6 @@ img {
 
 .pagination {
   transform: translateY(-100%);
-
-  /* margin-top: 1%; */
   display: flex;
   justify-content: flex-end;
 }
@@ -53,11 +51,12 @@ img {
 .pagination__contols {
   display: flex;
   justify-content: space-between;
-  width: 9rem;
+  background-color: blueviolet;
 }
 .pagination__contols .pagination__bullet {
   width: 1rem;
   height: 1rem;
+  border: 0.8rem solid blueviolet;
   border-radius: 50%;
   background-color: burlywood;
 }
@@ -73,15 +72,46 @@ input {
   background-color: cyan;
   cursor: pointer;
 }
-#p1:checked ~ .s1 {
+#p1:checked ~ .slider .s1 {
   margin-left: 0%;
 }
-#p2:checked ~ .s1 {
+#p2:checked ~ .slider .s1 {
   margin-left: -25%;
 }
-#p3:checked ~ .s1 {
+#p3:checked ~ .slider .s1 {
   margin-left: -50%;
 }
-#p4:checked ~ .s1 {
+#p4:checked ~ .slider .s1 {
   margin-left: -75%;
+}
+#p1:checked ~ .pagination .pagination__contols .pagination__area_1 label {
+  background-color: crimson;
+}
+#p2:checked ~ .pagination .pagination__contols .pagination__area_2 label {
+  background-color: crimson;
+}
+#p3:checked ~ .pagination .pagination__contols .pagination__area_3 label {
+  background-color: crimson;
+}
+#p4:checked ~ .pagination .pagination__contols .pagination__area_4 label {
+  background-color: crimson;
+}
+@media (max-width: 750px) {
+  img {
+    height: calc(100% - 5rem);
+  }
+  .pagination {
+    transform: translateY(-180%);
+    justify-content: center;
+  }
+  .text {
+    font-size: 1rem;
+    margin-top: 3rem;
+  }
+  .slider {
+    max-height: 95vh;
+  }
+  .text_4 {
+    letter-spacing: -1px;
+  }
 }
